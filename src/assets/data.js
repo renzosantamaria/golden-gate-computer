@@ -1,0 +1,283 @@
+const data = [
+    {
+        id: 1,
+        stock: 6,
+        category: "computadoras de escritorio",
+        name: "PC Combo Full Intel G5420 3.8 GHzl",
+        desc: `COMPUTADORA COMPLETA PARA ESTUDIO O TRABAJO. CASE RGB ATX 600 WATTS, PLACA MSI B360M MORTAR, PROC. INTEL G5420 3.8 Ghz, 8 GB DDR4, DISCO SSD 250 GB, PARLANTES 8 WATTS 2.0, TECLADO Y MOUSE INALAMBRICO, ANTIVIRUS KASPERSKY 1 AÑO. MONITOR LG/HP 19" HD NEGRO`,
+        price: 1829
+
+    },
+    {
+        id: 2,
+        stock: 5,
+        category: "computadoras de escritorio",
+        name: "PC Combo Full Intel G6400 4.0 GHz",
+        desc: `COMPUTADORA COMPLETA PARA ESTUDIO O TRABAJO. CASE RGB ATX 600 WATTS, PLACA H410M, PROC. INTEL G6400 4.0 Ghz, 8 GB DDR4, DISCO SSD 250 GB, PARLANTES 8 WATTS 2.0, TECLADO Y MOUSE INALAMBRICO, ANTIVIRUS KASPERSKY 1 AÑO. MONITOR LG/HP 19" HD NEGRO`,
+        price: 1829
+
+    },
+    {
+        id: 3,
+        stock: 2,
+        category: "Portatiles",
+        name: "LENOVO IDEAPAD 3 14IIL05",
+        desc: `Core i3-1005G1 1.2GHZ, 4GB DDR4, 1 TB HDD, 14"HD (1366 x 768), INTELUHD GRAPHICS, WEBCAM, BLUETOOTH, WINDOWS 10 H, COLOR PLATINUM GREY, TECLADO EN ESPAÑOL. `,
+        price: 2385
+
+    },
+    {
+        id: 4,
+        stock: 2,
+        category: "Portatiles",
+        name: "LENOVO IDEAPAD 3 14IML05",
+        desc: `Core i5-10210U 1.6GHZ, 8GB DDR4, 256GB SSD, 15.6"HD (1366 x 768), TOUCHSCREEN, INTEL UHD GRAPHICS, WEBCAM, BLUETOOTH, WINDOWS 10 H, COLOR ABBYS BLUE, TECLADO EN INGLES. `,
+        price: 3055
+
+    },
+    {
+        id: 5,
+        stock: 5,
+        category: "Impresoras",
+        name: "CANON PIXMA G3101 WIFI",
+        desc: `MULTIFUNCIONAL CON TINTA CONTINUA, WIFI, IMPRIME, COPIA, ESCANEA. RESOLUCION: NEGRO 600 x 600 dpi, COLOR 4800 x 1200 dpi, VELOCIDAD IMPRESIÓN: NEGRO 8.8 PPM, COLOR 5 PPM, BANDEJA PRINCIPAL: 100 HOJAS.`,
+        price: 715
+
+    },
+    {
+        id: 6,
+        stock: 1,
+        category: "Impresoras",
+        name: "HP INK TANK 315 USB",
+        desc: `MULTIFUNCIONAL CON TINTA CONTINUA, IMPRIME, COPIA, ESCANEA. RESOLUCION: NEGRO 1200 x 1200 dpi, COLOR 4800 x 1200 dpi, VELOCIDAD IMPRESIÓN: NEGRO 8 PPM, COLOR 5 PPM, BANDEJA PRINCIPAL: 60 HOJAS.`,
+        price: 615
+
+    },
+    {
+        id: 7,
+        stock: 5,
+        category: "Extensor de wifi",
+        name: "D-LINK DAP-1330 ",
+        desc: `N300 EXTENSOR DE WIFI, 300 Mbps, INDICADOR DE SEÑAL LED, PUERTO RJ45, FUNCIONES: REPETIDOR Y ACCESS POINT, WPS, 2 ANTENAS PLEGABLES, `,
+        price: 90
+
+    },
+    {
+        id: 8,
+        stock: 20,
+        category: "Parlantes",
+        name: "TRUST POLO SPEAKER SET 2.0 8 Watts",
+        desc: `JUEGO DE PARLANTES COMPACTOS POTENCIA DE SALIDA: 8 Watts (4W RMS). NO NECESITA TOMACORRIENTE, ENERGIA MEDIANTE USB.`,
+        price: 40
+
+    },
+    {
+        id: 9,
+        stock: 5,
+        category: "Parlantes",
+        name: "TRUST ZIVA SPEAKER SET 2.0 12 Watts",
+        desc: `JUEGO DE PARLANTES COMPACTOS CON SUB WOOFER, CONTROL DE VOLUMEN Y BASS, POTENCIA DE SALIDA: 12 Watts (6W RMS). NO NECESITA TOMACORRIENTE, ENERGIA MEDIANTE USB.`,
+        price: 63
+
+    },
+    {
+        id: 10,
+        stock: 2,
+        category: "Parlantes",
+        name: "TRUST ZIVA RGB 2.1 GAMING SPEAKER SET",
+        desc: `SET DE ALTAVOCES GAMER 2.1, ILUMINACION DE CICLO RGB , 2 ALTAVOCES SATELITE Y 1 SUBWOOFER DEMADERA, POTENCIA MAXIMA DE 22W, ALIMENTACION USB, 3.5mm PLUG, CONTROL DE GRAVES Y AGUDOS, VOLUMEN EN PARTE FRONTA, COMPATIBLE CON TABLET, SMARTPHONE, LAPTOP Y PC.`,
+        price: 98
+
+    },
+    {
+        id: 11,
+        stock: 30,
+        category: "Auriculares",
+        name: "TEROS AURICULARES BLUETOOTH TE-8080",
+        desc: `AUDIFONOS STEREO, SONIDO ALTA DEFINICION, MICROFONO INCORPORADO, RANURA TARJETA MICRO SD, RADIO FM, BLUETOOTH 5.0, BATERIA RECARGABLE 300 mAh, TIEMPO REPRODUCCION: 5 HORAS, RANGO DE TRABAJO: 10 MT.`,
+        price: 62
+
+    },
+    {
+        id: 12,
+        stock: 5,
+        category: "Auriculares",
+        name: "HALION HEADSET GAMER SCORPION S1 ROJO",
+        desc: `AUDIFONOS GAMER, MICROFONO DE ALTA SENSIBILIDAD, CABLE REFORZADO 2.1 MTS, CONECTOR 3.5 MM PARA PC, ACOLCHADO SUAVE, CONTROL DE VOLUMEN, `,
+        price: 49
+
+    },
+    {
+        id: 13,
+        stock: 5,
+        category: "Auriculares",
+        name: "HALION HEADSET GAMER SCORPION S2 ROJO",
+        desc: `AUDIFONOS GAMER, MICROFONO DE ALTA SENSIBILIDAD, CABLE REFORZADO 2.1 MTS, CONECTOR 3.5 MM PARA PC, ACOLCHADO SUAVE, CONTROL DE VOLUMEN, `,
+        price: 55
+
+    },
+    {
+        id: 14,
+        stock: 5,
+        category: "Mouse inalambrico",
+        name: "TRUST MOUSE INALAMBRICO TUCAN",
+        desc: `MOUSE INALAMBRICO CON DISEÑO, RANGO: 8 MT (2.4 Ghz), BOTON SELECTOR DE VELOCIDAD (800/1600 DPI), LATERALES DE CAUCHO PARA COMODIDAD Y AGARRE, PARA USO DE ZURDO Y DIESTRO, SWITCH APAGADO / ENCENDIDO PARA AHORRO DE BATERIA.`,
+        price: 30
+
+    },
+    {
+        id: 15,
+        stock: 5,
+        category: "Mouse inalambrico",
+        name: "TRUST MOUSE INALAMBRICO PAVO REAL",
+        desc: `MOUSE INALAMBRICO CON DISEÑO, RANGO: 8 MT (2.4 Ghz), BOTON SELECTOR DE VELOCIDAD (800/1600 DPI), LATERALES DE CAUCHO PARA COMODIDAD Y AGARRE, PARA USO DE ZURDO Y DIESTRO, SWITCH APAGADO / ENCENDIDO PARA AHORRO DE BATERIA.`,
+        price: 30
+
+    },
+    {
+        id: 16,
+        stock: 5,
+        category: "Mouse inalambrico",
+        name: "TRUST MOUSE INALAMBRICO LED",
+        desc: `MOUSE OPTICO INALAMBRICO NEGRO CON ILUMINACION LED MULTICOLOR, BOTON DE VELOCIDAD DE DPI 800 - 1600 DPI, micro RECEPCTOR USB, ALCANCE INALAMBRICO HASTA 8m, PARA DIESTROS Y ZURDOS, TIPO DE BATERIA AA, COMPATIBLE CON CHROME, MAC Y WINDOWS, COLOR NEGRO.`,
+        price: 36
+
+    },
+    {
+        id: 17,
+        stock: 15,
+        category: "Set de teclado y mouse",
+        name: "TRUST CLASSICLINE JUEGO TECLADO Y MOUSE",
+        desc: `COMBO DE TECLADO CABLEADO + MOUSE CABLEADO, CONEXIÓN USB, TECLADO EN ESPAÑOL, TECLAS DE TAMAÑO COMPLETO Y TECLADO NUMERICO, RESISTENTE A DERRAMES, MOUSE CON SENSOR OPTICO, ACCESIBLE PARA ZURDOS Y DIESTROS, COLOR NEGRO.`,
+        price: 48
+
+    },
+    {
+        id: 18,
+        stock: 10,
+        category: "Set de teclado y mouse",
+        name: "TEROS COMBO TECLADO Y MOUSE INALAMBRICO",
+        desc: `KIT INALÁMBRICO TECLADO ESPAÑOL + MOUSE TEROS TE4031, 2.4GHZ, RECEPTOR NANO USB, NEGRO, TECLADO NUMERICO, TECNOLOGIA DE AHORRO DE ENERGIA.`,
+        price: 40
+
+    },
+    {
+        id: 19,
+        stock: 10,
+        category: "Fuente de poder",
+        name: "TEROS FUENTE ATX-600 WATTS",
+        desc: `FUENTE DE ALIMENTACIÓN TEROS, 600W, ATX, 220V. CONECTORES: 1 ATX (24/20 PINES), 1 EPS 12 V (4 PINES), 2 CONECTOR SATA, 2 PERIFERICOS.`,
+        price: 50
+
+    },
+    {
+        id: 20,
+        stock: 5,
+        category: "Fuente de poder",
+        name: "TEROS FUENTE CERTIFICADA ATX 80 PLUS BRONZE",
+        desc: `FUENTE DE ALIMENTACIÓN TEROS TE7160, ATX, 600W, 80 PLUS BRONZE, 100V - 240VAC.  CONECTORES: 1 ATX (24/20 PINES), 1 EPS 12 V (8 PINES), 4 CONECTOR SATA, 4 PERIFERICOS (4 PÍNES).`,
+        price: 220
+
+    },
+    {
+        id: 21,
+        stock: 5,
+        category: "Monitores",
+        name: `LG 19M38A 19"`,
+        desc: `MONITOR LG 19" HD RESOLUCION 1366 x 768, VGA `,
+        price: 345
+
+    },
+    {
+        id: 22,
+        stock: 2,
+        category: "Monitores",
+        name: `LG 20MK400H-B 20"`,
+        desc: `MONITOR LG 19" HD RESOLUCION 1366 x 768, HDMI, VGA `,
+        price: 378
+
+    },
+    {
+        id: 23,
+        stock: 3,
+        category: "Monitores",
+        name: `HP P19b G4 19"`,
+        desc: `MONITOR HP 19" WXGA HD RESOLUCION 1366 x 768, VGA, HDMI`,
+        price: 369
+
+    },
+    {
+        id: 24,
+        stock: 1,
+        category: "Monitores",
+        name: `SAMSUNG T24H310HLB`,
+        desc: `MONITOR SAMSUNG 24" HD RESOLUCION 1366 x 768, HDMI. MONITOR Y TV DE 24" CON CONNECT SHARE`,
+        price: 589
+
+    },
+    {
+        id: 25,
+        stock: 6,
+        category: "HUB USB",
+        name: `TRUST MINI HUB USB 4 PUERTOS ALUMINIO`,
+        desc: `MINIHUB USB CON 4 PUERTOS USB 2.0 PARA CONEXIÓN ADICIONAL A ORDENADORES, TRANSFERENCIA DE DATOS O CONEXIÓN DE DISPOSITIVOS, COMPATIBLE CON ORDENADORES QUE INCLUYAN PUERTO USB-A, CARCASA DE ALUMINIO.`,
+        price: 29
+
+    },
+    {
+        id: 26,
+        stock: 3,
+        category: "Tablet",
+        name: `LENOVO TAB M7 7"`,
+        desc: `TABLET LENOVO TAB M7, 7", TOUCH, 1024X600, ANDROID 9.0 PIE, WI-FI, BLUETOOTH. 1GB RAM, 16 GB MEMORIA INTERNA. RANURA MICRO SD, CAMARA TRASERA 2 MP, FRONTAL 2 MP, BATERIA 3500 MAH.`,
+        price: 369
+
+    },
+    {
+        id: 27,
+        stock: 5,
+        category: "Tarjeta de video",
+        name: `ZOTAC NVIDIA GEFORCE GT 710 2GB`,
+        desc: `TARJETA GRAFICA DE VIDEO, 2GB MEMORIA, DDR3, 64 BITS, FRECUENCIA RELOJ 954 MHZ, DIRECTX, OPENGL 4.5, PCI EXPRESS 2.0, SINGLE SLOT, DL-DVI, VGA, HDMI.`,
+        price: 255
+
+    },
+    {
+        id: 28,
+        stock: 5,
+        category: "Tarjeta de video",
+        name: `GALAX GEFORCE GT 710 PASIVE`,
+        desc: `TARJETA GRAFICA DE VIDEO, 2GB MEMORIA, TIPO DDR3, 64 BITS, PCI-E 2.0 x 16, GPU GEFORCE GT 710, RELOJ DE MOTOR 954 MHZ, DVI, HDMI, VGA.`,
+        price: 245
+
+    },
+    {
+        id: 29,
+        stock: 4,
+        category: "Cooler para laptops",
+        name: `TRUST XSTREAM BREEZE LAPTOP COOLING STAND`,
+        desc: `SOPORTE DE ENFRIAMIENTO PARA LAPTOPS DE HASTA 16", 2 VENTILADORES SILENCIOSOS CON ALIMENTACION USB, DISEÑO INCLINADO CON ALMOHADILLAS DE GOMA, COMPATIBLE CON WINDOWS, COLOR BLACK.`,
+        price: 54
+
+    },
+    {
+        id: 30,
+        stock: 4,
+        category: "Cooler para laptops",
+        name: `TRUST CYCLONE COOLING STAND`,
+        desc: `SOPORTE DE ENFRIAMIENTO PARA LAPTOPS DE HASTA 16", 2 VENTILADORES ALIMENTADOS POR USB, 8 NIVELES DE DISEÑO AJUSTABLE, PROTECTOR DE CAUCHO ANTI DESLIZANTE Y ANTIRRAYONES, COMPATIBLE CON WINDOWS Y MAC, COLOR BLACK.`,
+        price: 73
+
+    },
+    {
+        id: 31,
+        stock: 1,
+        category: "Cooler para laptops",
+        name: `TRUST GXT278 YOZU COOLING STAND`,
+        desc: `SOPORTE DE ENFRIAMIENTO PARA LAPTOPS DE HASTA 17.3", 4 VENTILADORES DE 120mm ILUMINADOS EN ROJO, VELOCIDAD AJUSTABLE Y CARCASA ROBUSTA, ALTURA AJUSTABLE EN 3 NIVELES, ALMACENAMIENTO DE CLABLE INTEGRADO, CONEXIÓN USB.`,
+        price: 115
+
+    },
+]
+
+export default data

@@ -1,18 +1,63 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img class="hero" src="@/assets/hero3.jpeg" alt="">
+    <h1>Products</h1>
+    <ul>
+      <li v-for="product in productList" :key="product.id"
+      >
+        <ProductCard
+        @click.native="viewProduct(product.id)"
+        :stock="product.stock"
+        :category="product.category"
+        :name="product.name"
+        :desc="product.taste"
+        :price="product.price"
+        />
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
+import ProductCard from "@/components/ProductCard.vue";
 export default {
-  name: 'Home',
   components: {
-    HelloWorld
+    ProductCard
+  },
+  data(){
+  return{
+    products: this.$root.data
+  }
+  },
+  computed:{
+    productList(){
+      return this.$root.data
+    }
+  },
+  methods:{
+    viewProduct(userId){
+      this.$router.push({ path: `/product/${userId}` })
+    }
   }
 }
 </script>
+
+<style lang="scss">
+.home{
+  .hero{
+    width: 100%;
+    margin-bottom: 80px;
+  }
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    li{
+      list-style: none;
+      margin: auto;
+      cursor: pointer;
+    }
+  }
+}
+</style>
